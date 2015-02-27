@@ -65,8 +65,7 @@
     captureOutput.alwaysDiscardsLateVideoFrames = YES;
     
     [captureOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
-    // Set the video output to store frame in BGRA (It is supposed to be faster)
-    
+    // Set the video output to store frame in BGRA
     NSString* key = (NSString*)kCVPixelBufferPixelFormatTypeKey;
 
     // 420YpCbCr8 is supposed to be faster
@@ -125,6 +124,7 @@
             [conn setVideoMinFrameDuration:CMTimeMake(1, 15)];
         }
     }
+    /*
     else
     {
         // High FPS using Slow Motion Capture (60-120FPS) :)
@@ -142,11 +142,6 @@
                 }
             }
             
-            //float maxrate=((AVFrameRateRange*)[vFormat.videoSupportedFrameRateRanges objectAtIndex:0]).maxFrameRate;
-            
-            // We take the first one that is at least 60FPS
-            // if(maxrate>59 && (CMFormatDescriptionGetMediaSubType(description)==kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange || CMFormatDescriptionGetMediaSubType(description)==kCVPixelFormatType_420YpCbCr8BiPlanarFullRange))
-            
             if(maxrate>59 && CMFormatDescriptionGetMediaSubType(description)==kCVPixelFormatType_32BGRA)
             {
                 if ( YES == [self.device lockForConfiguration:NULL] )
@@ -162,6 +157,7 @@
             }
         }
     }
+    */
 }
 
 -(AVCaptureVideoOrientation)videoOrientationFromDeviceOrientation {
@@ -235,7 +231,9 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     //NSData* data = UIImageJPEGRepresentation(image,1.0);
     //NSLog(@"Got Jpeg :)");
     //NSLog(@"Got %@",_jpgData);
-    
+
+    // END OF SAVE TO JPG
+
     //NSString *path = @"%Out.jpeg";
     //[data writeToFile:path atomically:YES];
 
@@ -247,8 +245,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     //[self.webView performSelectorOnMainThread:@selector(stringByEvaluatingJavaScriptFromString:) withObject:javascript waitUntilDone:YES];
 
     
-    // END OF SAVE TO JPG
-    
+
 #if !__has_feature(objc_arc)
     [image release];
 #endif
