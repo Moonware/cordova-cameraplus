@@ -27,4 +27,19 @@ stopCamera( success_callback, error_callback );
 getVideoFormats( success_callback, error_callback );
 
 setVideoFormat( success_callback, error_callback );
+
+getJpegImage( success_callback, error_callback );
 ```
+
+
+getJpegImage will return a JPEG image encoded in base 64.
+
+You can then set it to an image from HTML/JS part of the application:
+
+Standard JS:
+```camImage.src = "data:image/jpeg;base64," + data;```
+
+or
+
+AngularJS/Ionic:
+```<img src="data:image/jpeg;base64, {{data}}">```
