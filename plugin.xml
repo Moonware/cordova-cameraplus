@@ -36,7 +36,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 
     <source-file src="src/android/CameraPlus.java" target-dir="src/com/moonware/cameraplus" />
     <source-file src="src/android/CameraManager.java" target-dir="src/com/moonware/cameraplus" />
-    <source-file src="src/android/AndroidFile.java" target-dir="src/com/moonware/cameraplus" />
 </platform>
 
 <platform name="ios">
