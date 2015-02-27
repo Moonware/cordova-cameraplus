@@ -29,8 +29,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/*">
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         <uses-permission android:name="android.permission.CAMERA" />     
     </config-file>
 
@@ -46,12 +44,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     </config-file>
 
     <source-file src="src/ios/CameraPlus.m" />
-
-    <!--
-    <framework src="CFNetwork.framework" />
-    <framework src="Foundation.framework" />
-    <framework src="Security.framework" />
-    -->
 
     <header-file src="src/ios/CameraManager.h" />
     <source-file src="src/ios/CameraManager.m" />

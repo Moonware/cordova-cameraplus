@@ -3,6 +3,8 @@ package com.moonware.cameraplus;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -22,7 +24,7 @@ import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
 
-@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public final class CameraManager {
 
 	private static CameraManager cameraManager;
