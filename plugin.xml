@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin 
+id="com.moonware.cameraplus"
+version="0.2.0"
+xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<name>CameraPlus</name>
+<description>CameraPlus is a plugin that allows retrieving live Base64 Images from Camera into a Cordova App</description>
+<author>Steve Niquille</author>
+<license>MIT</license>
+<keywords>camera,base64,phonegap,cordova,jpeg,ios,android</keywords>
+<repo>https://github.com/moonware/cordova-cameraplus</repo>
+<issue>https://github.com/moonware/cordova-cameraplus</issue>
+
+<engines>
+    <engine name="cordova" version=">=2.9" />
+</engines>
+
+<js-module name="CameraPlus" src="www/CameraPlus.js">
+    <clobbers target="cordova.plugins.CameraPlus" />
+</js-module>
+
+<platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+        <feature name="CameraPlus">
+        <param name="android-package" value="com.moonware.cameraserver.CameraPlus" />
+        </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.CAMERA" />     
+    </config-file>
+
+    <source-file src="src/android/CameraPlus.java" target-dir="src/com/moonware/cameraplus" />
+    <source-file src="src/android/CameraManager.java" target-dir="src/com/moonware/cameraplus" />
+    <source-file src="src/android/AndroidFile.java" target-dir="src/com/moonware/cameraplus" />
+</platform>
+
+<platform name="ios">
+    <config-file parent="/*" target="config.xml">
+    <feature name="CameraPlus">
+        <param name="ios-package" value="CameraPlus" />
+    </feature>
+    </config-file>
+
+    <source-file src="src/ios/CameraPlus.m" />
+
+    <!--
+    <framework src="CFNetwork.framework" />
+    <framework src="Foundation.framework" />
+    <framework src="Security.framework" />
+    -->
+
+    <header-file src="src/ios/CameraManager.h" />
+    <source-file src="src/ios/CameraManager.m" />
+
+    <framework src="CoreVideo.framework" weak="false" />
+    <framework src="CoreGraphics.framework" weak="false" />
+    <framework src="QuartzCore.framework" weak="false" />
+
+</platform>
+
+</plugin>
