@@ -27,8 +27,6 @@
 
 - (void)pluginInitialize
 {
-    //self.jpgData = NULL;
-    //self.base64String = @"";
 }
 
 - (void)startCamera:(CDVInvokedUrlCommand*)command
@@ -56,7 +54,7 @@
         [self.cameraManager deinitCapture];
         self.cameraManager = nil;
     }
-        
+
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }

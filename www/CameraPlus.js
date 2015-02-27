@@ -35,5 +35,9 @@ cameraplus_exports.getVideoFormats = function(success, error) {
 	exec(success, error, "CameraPlus", "getVideoFormats", []);
 };
 
+cameraplus_exports.onCapture = function(success, error) {
+	//TODO: Overwrite this methods for receiving the content
+};
+
 module.exports = cameraplus_exports;
 
