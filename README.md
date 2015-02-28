@@ -5,7 +5,8 @@ Supported platform:
 * Android
 
 CameraPlus has the following features
-* Retrieve live images from Camera from Phonegap application in Base64
+* Retrieve live images from Camera in the background
+* Retrieve the images in HTML/JS in Base64 so that they can be displayed, saved in localstorage and sent using HTTP POST
 * Set the target format (iOS only)
 * Automatically stops capturing if no request made for 5 seconds, wake up camera when image requested
 
