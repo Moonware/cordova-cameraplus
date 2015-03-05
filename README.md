@@ -54,9 +54,9 @@ https://github.com/Moonware/cordova-cameraplus-testapp
 
 ## Known issues ##
 
-Unfortunately at this time, the iOS version suffers from an identified issue probably due to a memory leak.
+On iOS there are known memory leaks issues related to UIWebView, the application will most likely crash after a few minutes of intensive usage (pulling images at 15-20fps). The Android version doesn't seem to suffer from similar problems.
 
-If you think that you can help, feel free to participate in one of these topic:
+If you think that you can help on resolving this problem, feel free to participate in one of these topic:
 
 http://forum.ionicframework.com/t/camera-plus-cordova-plugin-ios-help-needed/18375
 
