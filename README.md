@@ -61,3 +61,10 @@ If you think that you can help on resolving this problem, feel free to participa
 http://forum.ionicframework.com/t/camera-plus-cordova-plugin-ios-help-needed/18375
 
 http://stackoverflow.com/questions/28771897/cordova-custom-camera-plugin-ios-memory-leak
+
+## Known Solution ##
+
+In order to solve the above problem, we have decided to change the approach and rely over HTTP for transferring the images from native code to Cordova rather than using the "standard" plugin approach. Therefore we have created the <strong>Camera Server</strong> Plugin:
+
+[Camera Server Plugin](https://github.com/Moonware/cordova-cameraserver/)
+
