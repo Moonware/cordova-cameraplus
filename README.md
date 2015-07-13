@@ -66,7 +66,7 @@ http://stackoverflow.com/questions/28771897/cordova-custom-camera-plugin-ios-mem
 
 In order to solve the above problem, we have decided to change the approach and to use HTTP for transferring the images between the native code back to Cordova rather than using the "standard" plugin approach. 
 
-Therefore we have created the <strong>Camera Server</strong> Plugin which is a fusion between <strong>CameraPlus</strong> and <strong>CorHttpd</strong>:
+Therefore we have created the <strong>CameraServer</strong> Plugin which is a fusion between <strong>CameraPlus</strong> and <strong>CorHttpd</strong>:
 
-[Camera Server Plugin](https://github.com/Moonware/cordova-cameraserver/)
+[CameraServer Plugin](https://github.com/Moonware/cordova-cameraserver/)
 
