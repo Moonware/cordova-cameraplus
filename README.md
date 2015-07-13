@@ -52,7 +52,7 @@ AngularJS/Ionic:
 A ready to try Ionic application is available here:
 https://github.com/Moonware/cordova-cameraplus-testapp
 
-## Known issues ##
+## Known Issues ##
 
 On iOS there are known memory leaks issues related to UIWebView, the application will most likely crash after a few minutes of intensive usage (pulling images at 15-20fps). The Android version doesn't seem to suffer from similar problems.
 
