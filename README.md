@@ -1,4 +1,4 @@
-## CameraPlus For Cordova ##
+## CameraPlus Plugin For Cordova ##
 
 Supported platform:
 * iOS
